@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Win een Geschenk!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 480px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #d81b60;
+    }
+    .timer {
+      font-size: 24px;
+      color: #e53935;
+      margin: 15px 0;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .comments {
+      margin-top: 40px;
+      text-align: left;
+    }
+    .comment {
+      background: #eee;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+    .footer {
+      font-size: 12px;
+      color: #888;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Gefeliciteerd!</h1>
+    <p>Je komt in aanmerking voor een <strong>exclusieve beloning</strong>.<br>Beantwoord een paar vragen om te claimen.</p>
+    
+    <div class="timer" id="countdown">Aanbieding verloopt in: 03:00</div>
+
+    <a class="cta-button" href="https://singingfiles.com/show.php?l=0&u=2399677&id=68718" target="_blank">👉 Klik hier om te beginnen</a>
+
+    <div class="comments">
+      <h3>Reacties:</h3>
+      <div class="comment"><strong>Lisa Janssens:</strong> Wow! Ik heb net mijn cadeaubon ontvangen 😍</div>
+      <div class="comment"><strong>Tom Vermeulen:</strong> Duurde slechts 2 minuten, bedankt!</div>
+      <div class="comment"><strong>Inge Peeters:</strong> Ik dacht dat het nep was, maar het werkte echt!</div>
+    </div>
+
+    <div class="footer">
+      © 2025 WinGeschenk.be | Geen aankoop vereist
+    </div>
+  </div>
+
+  <script>
+    // Countdown timer (3 min)
+    let time = 180;
+    const countdown = document.getElementById("countdown");
+    const timer = setInterval(() => {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      countdown.textContent = `Aanbieding verloopt in: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+      time--;
+      if (time < 0) clearInterval(timer);
+    }, 1000);
+  </script>
+</body>
+</html>
